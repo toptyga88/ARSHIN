@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+
+# IDE (PyCharm)
+.idea/
+*.iml
+
+# Окружение
+.env
+.env.local
+
+
+# Логи и временные файлы
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Тесты
+.pytest_cache/
+.coverage
+htmlcov/
