@@ -1,0 +1,112 @@
+<svg width="700" height="620" viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<style>
+  .title { font-size: 14px; font-weight: 600; }
+  .attr { font-size: 12px; }
+  .card { stroke-width: 0.6; }
+  .line { stroke: #444; stroke-width: 1; fill: none; }
+  .div { stroke: #888; stroke-width: 0.3; opacity: 0.4; }
+  .cn { font-size: 12px; fill: #444; font-weight: 600; }
+</style>
+</defs>
+
+<!-- Бренд -->
+<g>
+<rect x="20" y="40" width="180" height="120" rx="8" class="card" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="110" y="62" text-anchor="middle" dominant-baseline="central" class="title" fill="#3C3489">Бренд</text>
+<line x1="35" y1="76" x2="185" y2="76" class="div"/>
+<text x="35" y="94" dominant-baseline="central" class="attr" fill="#26215C">название</text>
+<text x="35" y="112" dominant-baseline="central" class="attr" fill="#26215C">страна</text>
+<text x="35" y="130" dominant-baseline="central" class="attr" fill="#26215C">город</text>
+<text x="35" y="148" dominant-baseline="central" class="attr" fill="#26215C" font-style="italic">пример: Декаст</text>
+</g>
+
+<!-- Тип СИ -->
+<g>
+<rect x="250" y="40" width="180" height="160" rx="8" class="card" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="340" y="62" text-anchor="middle" dominant-baseline="central" class="title" fill="#085041">Тип СИ</text>
+<line x1="265" y1="76" x2="415" y2="76" class="div"/>
+<text x="265" y="94" dominant-baseline="central" class="attr" fill="#04342C">рег.номер  PK</text>
+<text x="265" y="112" dominant-baseline="central" class="attr" fill="#04342C">наименование</text>
+<text x="265" y="130" dominant-baseline="central" class="attr" fill="#04342C">обозначение</text>
+<text x="265" y="148" dominant-baseline="central" class="attr" fill="#04342C">модификации</text>
+<text x="265" y="166" dominant-baseline="central" class="attr" fill="#04342C">категория</text>
+<text x="265" y="188" dominant-baseline="central" class="attr" fill="#04342C" font-style="italic">пример: 12345-21</text>
+</g>
+
+<!-- Производитель -->
+<g>
+<rect x="480" y="40" width="180" height="120" rx="8" class="card" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="570" y="62" text-anchor="middle" dominant-baseline="central" class="title" fill="#633806">Производитель</text>
+<line x1="495" y1="76" x2="645" y2="76" class="div"/>
+<text x="495" y="94" dominant-baseline="central" class="attr" fill="#412402">название</text>
+<text x="495" y="112" dominant-baseline="central" class="attr" fill="#412402">страна</text>
+<text x="495" y="130" dominant-baseline="central" class="attr" fill="#412402">город</text>
+<text x="495" y="148" dominant-baseline="central" class="attr" fill="#412402">адрес</text>
+</g>
+
+<!-- Бренд → Тип СИ -->
+<line x1="200" y1="100" x2="244" y2="100" class="line" marker-end="url(#arrow)"/>
+<text x="206" y="92" text-anchor="middle" class="cn">1</text>
+<text x="240" y="92" text-anchor="middle" class="cn">N</text>
+
+<!-- Производитель → Тип СИ -->
+<line x1="480" y1="100" x2="436" y2="100" class="line" marker-end="url(#arrow)"/>
+<text x="476" y="92" text-anchor="middle" class="cn">1</text>
+<text x="442" y="92" text-anchor="middle" class="cn">N</text>
+
+<!-- Тип СИ → Устройство -->
+<line x1="300" y1="200" x2="180" y2="290" class="line" marker-end="url(#arrow)"/>
+<text x="298" y="217" text-anchor="middle" class="cn">1</text>
+<text x="190" y="284" text-anchor="middle" class="cn">N</text>
+
+<!-- Тип СИ → Поверка -->
+<line x1="380" y1="200" x2="500" y2="290" class="line" marker-end="url(#arrow)"/>
+<text x="382" y="217" text-anchor="middle" class="cn">1</text>
+<text x="490" y="284" text-anchor="middle" class="cn">N</text>
+
+<!-- Устройство -->
+<g>
+<rect x="60" y="300" width="200" height="120" rx="8" class="card" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="160" y="322" text-anchor="middle" dominant-baseline="central" class="title" fill="#0C447C">Устройство</text>
+<line x1="75" y1="336" x2="245" y2="336" class="div"/>
+<text x="75" y="354" dominant-baseline="central" class="attr" fill="#042C53">заводской номер  PK</text>
+<text x="75" y="372" dominant-baseline="central" class="attr" fill="#042C53">модификация</text>
+<text x="75" y="390" dominant-baseline="central" class="attr" fill="#042C53">год выпуска</text>
+<text x="75" y="410" dominant-baseline="central" class="attr" fill="#042C53" font-style="italic">пример: СВК-15  №А847</text>
+</g>
+
+<!-- Поверка -->
+<g>
+<rect x="400" y="300" width="220" height="160" rx="8" class="card" fill="#FAECE7" stroke="#993C1D"/>
+<text x="510" y="322" text-anchor="middle" dominant-baseline="central" class="title" fill="#712B13">Поверка</text>
+<line x1="415" y1="336" x2="605" y2="336" class="div"/>
+<text x="415" y="354" dominant-baseline="central" class="attr" fill="#4A1B0C">vri_id  PK</text>
+<text x="415" y="372" dominant-baseline="central" class="attr" fill="#4A1B0C">дата поверки</text>
+<text x="415" y="390" dominant-baseline="central" class="attr" fill="#4A1B0C">vriType (1=первичная, 2=периодич.)</text>
+<text x="415" y="408" dominant-baseline="central" class="attr" fill="#4A1B0C">пригоден / нет</text>
+<text x="415" y="426" dominant-baseline="central" class="attr" fill="#4A1B0C">действительна до</text>
+<text x="415" y="448" dominant-baseline="central" class="attr" fill="#4A1B0C" font-style="italic">пример: 12.03.2025</text>
+</g>
+
+<!-- Устройство → Поверка -->
+<line x1="260" y1="358" x2="396" y2="358" class="line" marker-end="url(#arrow)"/>
+<text x="270" y="350" text-anchor="middle" class="cn">1</text>
+<text x="386" y="350" text-anchor="middle" class="cn">N</text>
+
+<!-- Поверитель -->
+<g>
+<rect x="250" y="500" width="180" height="100" rx="8" class="card" fill="#FBEAF0" stroke="#993556"/>
+<text x="340" y="522" text-anchor="middle" dominant-baseline="central" class="title" fill="#72243E">Поверитель</text>
+<line x1="265" y1="536" x2="415" y2="536" class="div"/>
+<text x="265" y="554" dominant-baseline="central" class="attr" fill="#4B1528">название (юрлицо)</text>
+<text x="265" y="572" dominant-baseline="central" class="attr" fill="#4B1528">страна</text>
+<text x="265" y="590" dominant-baseline="central" class="attr" fill="#4B1528" font-style="italic">пример: ООО ЗАВОД №423</text>
+</g>
+
+<!-- Поверитель → Поверка -->
+<line x1="410" y1="505" x2="490" y2="465" class="line" marker-end="url(#arrow)"/>
+<text x="416" y="497" text-anchor="middle" class="cn">1</text>
+<text x="484" y="473" text-anchor="middle" class="cn">N</text>
+</svg>
