@@ -41,7 +41,7 @@
 ## 📚 Документация
 
 - **Официальная документация на API ФГИС Аршин:** «Руководство пользователя компонента "Внешние публичные интерфейсы"» v.2.2, 2024 г. (PDF, 59 листов). Описание эндпоинтов, параметров, ограничений (rate-limit 2/сек, `start ≤ 99 999`)
-- **Реестр ФГИС Аршин:** https://fgis.gost.ru/fundmetrology/cm/icsbase
+- **Реестр ФГИС Аршин:** [https://fgis.gost.ru/fundmetrology/cm/icsbase](https://fgis.gost.ru/fundmetrology/cm/)
 - **API (продуктив):** `https://fgis.gost.ru/fundmetrology/eapi/`
 - **API (тест):** `https://fgis.gost.ru/fundmetrologytest/eapi/`
 - **Внутренние документы:** папка `docs/` репозитория
